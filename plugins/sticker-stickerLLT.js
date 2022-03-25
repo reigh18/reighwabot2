@@ -1,27 +1,19 @@
-import { sticker } from '../lib/sticker.js'
-import { stickerLine, stickerTelegram } from '@bochilteam/scraper'
+let handler = async(m, { conn, command }) => {
+  let isPublic = command === "public";
+  let self = global.opts["self"]
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    // TODO: add stickerly
-    const isTele = /tele/i.test(command)
-    if (!args[0]) throw `*Perintah ini untuk mengambil stiker dari ${isTele ? 'Tele' : 'Line'}*\n\nContoh penggunaan:\n${usedPrefix + command} spongebob`
-    const json = await (isTele ? stickerTelegram : stickerLine)(args[0])
-    m.reply(`
-*Total stiker:* ${(json[0]?.stickers || json).length}
-`.trim())
-    for (let data of (json[0]?.stickers || json)) {
-        const stiker = await sticker(false, data.sticker || data, global.packname, global.author)
-        await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m).catch(console.error)
-        await delay(1500)
-    }
+  if(self === !isPublic) return m.reply(`Dah ${!isPublic ? "Self" : "Public"} dari tadi ${m.sender.split("@")[0] === global.owner[1] ? "Mbak" : "Bang"} :v`)
 
+  global.opts["self"] = !isPublic
+
+  m.reply(`Berhasil ${!isPublic ? "Self" : "Public"} bot!`)
 }
-handler.help = ['stikerline <url>']
-handler.tags = ['sticker']
-handler.command = /^(stic?ker(line|tele(gram)?))$/i
 
-handler.limit = true
+handler.help = ["self", "public"]
+handler.tags = ["owner"]
 
-export default handler
+handler.owner = true
 
-const delay = time => new Promise(res => setTimeout(res, time))
+handler.command = /^(self|public)/i
+
+module.exports = handler
