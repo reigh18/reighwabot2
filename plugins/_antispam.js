@@ -1,22 +1,19 @@
-export async function all(m) {
-    if (!m.message)
-        return
-    this.spam = this.spam ? this.spam : {}
-    if (m.sender in this.spam) {
-        this.spam[m.sender].count++
-        if (m.messageTimestamp.toNumber() - this.spam[m.sender].lastspam > 10) {
-            if (this.spam[m.sender].count > 10) {
-                //global.db.data.users[m.sender].banned = true
-                m.reply('*Jangan Spam!!*')
-            }
-            this.spam[m.sender].count = 0
-            this.spam[m.sender].lastspam = m.messageTimestamp.toNumber()
-        }
-    }
-    else
-        this.spam[m.sender] = {
-            jid: m.sender,
-            count: 0,
-            lastspam: 0
-        }
+const fs = require('fs')
+const path = require('path')
+let handler = async (m, { usedPrefix, command, text }) => {
+    if (!text) throw `where is the text?\n\nexempel: ${usedPrefix + command} menu`
+    const filename = path.join(__dirname, `./${text}${!/\.js$/i.test(text) ? '.js' : ''}`)
+    const listPlugins = fs.readdirSync(path.join(__dirname)).map(v => v.replace(/\.js/, ''))
+    if (!fs.existsSync(filename)) return m.reply(`
+'${filename}' not found!
+${listPlugins.map(v => v).join('\n').trim()}
+`.trim())
+    m.reply(fs.readFileSync(filename, 'utf8'))
 }
+handler.help = ['getplugin'].map(v => v + ' [filename]')
+handler.tags = ['owner']
+handler.command = /^(getplugin|get ?plugin)$/i
+
+handler.rowner = true
+
+module.exports = handler
