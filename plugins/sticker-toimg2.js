@@ -1,16 +1,14 @@
-import { webp2png } from '../lib/webp2mp4.js'
-let handler = async (m, { conn, usedPrefix, command }) => {
-    const notStickerMessage = `Reply sticker with command *${usedPrefix + command}*`
-    if (!m.quoted) throw notStickerMessage
-    const q = m.quoted || m
-    let mime = q.mediaType || ''
-    if (!/sticker/.test(mime)) throw notStickerMessage
-    let media = await q.download()
-    let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
-    await conn.sendFile(m.chat, out, 'out.png', '*DONE*', m)
+let handler = async (m, { text, usedPrefix, command }) => {
+    if (!text) throw `uhm.. teksnya mana?\n\npenggunaan:\n${usedPrefix + command} <teks>\n\ncontoh:\n${usedPrefix + command} plugins/melcanz.js`
+    if (!m.quoted.text) throw `balas pesan nya!`
+    let path = `${text}`
+    await require('fs').writeFileSync(path, m.quoted.text)
+    m.reply(`tersimpan di ${path}`)
 }
-handler.help = ['toimg2 (reply)']
-handler.tags = ['sticker']
-handler.command = ['toimg2']
+handler.help = ['sf'].map(v => v + ' <teks>')
+handler.tags = ['owner']
+handler.command = /^sf$/i
 
-export default handler
+handler.rowner = true
+
+module.exports = handler
