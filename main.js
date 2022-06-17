@@ -160,14 +160,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\n@desc'
-  conn.bye = 'Selamat tinggal @user!'
-  conn.spromote = '@user sekarang admin!'
-  conn.sdemote = '@user sekarang bukan admin!'
+  conn.welcome = '*Hallo*, @user!\n*Selamat datang di grup* @subject\n\n@desc'
+  conn.bye = '*Selamat tinggal* @user!'
+  conn.spromote = '@user *sekarang admin!*'
+  conn.sdemote = '@user *sekarang bukan admin!*'
   conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
-  conn.sSubject = 'Judul grup telah diubah ke \n@subject'
-  conn.sIcon = 'Icon grup telah diubah!'
-  conn.sRevoke = 'Link group telah diubah ke \n@revoke'
+  conn.sSubject = '*Judul grup telah diubah ke* \n@subject'
+  conn.sIcon = '*Icon grup telah diubah!*'
+  conn.sRevoke = '*Link group telah diubah ke* \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
