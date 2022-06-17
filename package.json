@@ -1,5 +1,5 @@
 {
-    "name": "shiro-md",
+    "name": "ArullBotzMD",
     "version": "0.9.86",
     "description": "Customizable WhatsApp Bot",
     "main": "index.js",
@@ -26,9 +26,9 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/BochilGaming/games-wabot",
+    "homepage": "https://github.com/Warikrr/games-wabot",
     "author": {
-        "name": "BochilGaming"
+        "name": "ArullOfc"
     },
     "repository": {
         "type": "git",
