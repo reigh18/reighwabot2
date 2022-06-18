@@ -631,7 +631,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*_Message By ArullOfc_*') :
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                         this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
                     }
