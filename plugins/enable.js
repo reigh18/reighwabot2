@@ -154,6 +154,13 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       global.opts['gconly'] = isEnable
       break
+    case 'simi':
+      if (m.isGroup) {
+        global.dfail('private', m, conn)
+        throw false
+      } 
+      chat.simi = isEnable
+      break
     case 'swonly':
     case 'statusonly':
       isAll = true
