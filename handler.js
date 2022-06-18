@@ -268,8 +268,10 @@ export async function handler(chatUpdate) {
                     chat.viewonce = true
                 if (!('antiToxic' in chat))
                     chat.antiToxic = true
+                if (!('simi' in chat))
+                    chat.simi = true
                 if (!isNumber(chat.expired))
-                    chat.expired = 0
+                    chat.expired = 5
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
@@ -289,8 +291,8 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
-                if (!('restrict' in settings)) settings.restrict = false
+                if (!('autoread' in settings)) settings.autoread = true
+                if (!('restrict' in settings)) settings.restrict = true
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: true,
