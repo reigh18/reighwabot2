@@ -31,20 +31,20 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 *ArullBotzMD* 」
-│ 👋🏻 Hai, %name!
-│─「 *INFO USER* 」
-│ 🧱 Limit : *%limit Limit*
-│ 🦸🏼‍♂️ Role : *%role*
-│ 🔼 Level : *%level (%exp / %maxexp)*
-│ 💫 Total XP : %totalexp ✨
-│ ─「 *TANGGAL* 」
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
-│─「 *INFO BOT* 」
-│ 📈 Uptime: *%uptime (%muptime)*
-│ 📊 Database: %rtotalreg of %totalreg
-╰────
+╭──❉ 「 *ArullBotzMD* 」❉──────
+║╭────❉ 「 *INFO USER* 」❉──────
+║│➸*Nama*    :%name!
+║│➸*Limit*   :%limit Limit
+║│➸*Role*    :%role
+║│➸*Level*   :%level (%exp / %maxexp)
+║│➸*TotalXP* :%totalexp ✨
+║╰────❉ 「 *TANGGAL* 」❉──────
+║│➸*Tanggal* :%week, %date
+║│➸*Waktu*   :%time
+║╰────❉ 「 *INFO BOT* 」❉──────
+║│➸*Uptime*  :%uptime (%muptime)
+║│➸*Database*:%rtotalreg of %totalreg
+╰─────❉
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
   body: '│ • %cmd %islimit %isPremium',
