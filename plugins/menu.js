@@ -33,17 +33,17 @@ const defaultMenu = {
   before: `
 ╭──❉ 「 *ArullBotzMD* 」❉──────
 ║╭────❉ 「 *INFO USER* 」❉──────
-║│➸*Nama*    :%name!
-║│➸*Limit*   :%limit Limit
-║│➸*Role*    :%role
-║│➸*Level*   :%level (%exp / %maxexp)
-║│➸*TotalXP* :%totalexp ✨
+║│➸Nama    :%name!
+║│➸Limit   :%limit Limit
+║│➸Role    :%role
+║│➸Level   :%level (%exp / %maxexp)
+║│➸TotalXP :%totalexp ✨
 ║╰────❉ 「 *TANGGAL* 」❉──────
-║│➸*Tanggal* :%week, %date
-║│➸*Waktu*   :%time
+║│➸Tanggal :%week, %date
+║│➸Waktu   :%time
 ║╰────❉ 「 *INFO BOT* 」❉──────
-║│➸*Uptime*  :%uptime (%muptime)
-║│➸*Database*:%rtotalreg of %totalreg
+║│➸Uptime  :%uptime (%muptime)
+║│➸Database:%rtotalreg of %totalreg
 ╰─────❉
 %readmore`.trimStart(),
   header: '╭─「 %category 」',
