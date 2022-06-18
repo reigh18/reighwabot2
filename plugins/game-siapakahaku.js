@@ -17,7 +17,7 @@ Ketik ${usedPrefix}who untuk bantuan
 Bonus: ${poin} XP
 `.trim()
     conn.siapakahaku[id] = [
-        await conn.sendButton(m.chat, caption, author, ['hint', `${usedPrefix}who`], m),
+        await conn.sendButton(m.chat, caption, author, ['bantuan', `${usedPrefix}who`], m),
         json, poin,
         setTimeout(() => {
             if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, author, ['siapahaku', '/siapakahaku'], conn.siapakahaku[id][0])
