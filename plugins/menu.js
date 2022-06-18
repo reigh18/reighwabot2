@@ -31,17 +31,17 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 ArullBotzMD 」
+╭─「 *ArullBotzMD* 」
 │ 👋🏻 Hai, %name!
-│─「 INFO USER 」
+│─「 *INFO USER* 」
 │ 🧱 Limit : *%limit Limit*
 │ 🦸🏼‍♂️ Role : *%role*
 │ 🔼 Level : *%level (%exp / %maxexp)*
 │ 💫 Total XP : %totalexp ✨
-│ ─「 TANGGAL 」
+│ ─「 *TANGGAL* 」
 │ 📅 Tanggal: *%week, %date*
 │ 🕰️ Waktu: *%time*
-│─「 INFO BOT 」
+│─「 *INFO BOT* 」
 │ 📈 Uptime: *%uptime (%muptime)*
 │ 📊 Database: %rtotalreg of %totalreg
 ╰────
