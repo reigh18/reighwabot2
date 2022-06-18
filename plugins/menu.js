@@ -31,17 +31,17 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭──❉ 「 *ArullBotzMD* 」❉──────
-║╭────❉ 「 *INFO USER* 」❉──────
+╭──❉ 「 *ArullBotzMD* 」
+║╭────❉ 「 *INFO USER* 」
 ║│➸Nama    :%name!
 ║│➸Limit   :%limit Limit
 ║│➸Role    :%role
 ║│➸Level   :%level (%exp / %maxexp)
 ║│➸TotalXP :%totalexp ✨
-║╰────❉ 「 *TANGGAL* 」❉──────
+║╰────❉ 「 *TANGGAL* 」
 ║│➸Tanggal :%week, %date
 ║│➸Waktu   :%time
-║╰────❉ 「 *INFO BOT* 」❉──────
+║╰────❉ 「 *INFO BOT* 」
 ║│➸Uptime  :%uptime (%muptime)
 ║│➸Database:%rtotalreg of %totalreg
 ╰─────❉
