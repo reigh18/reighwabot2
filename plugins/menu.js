@@ -150,7 +150,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    const pp = 'https://telegra.ph/file/41da653f2a4e3da200fc3.jpg'
+    const pp = 'https://telegra.ph/file/e35b31817d23c4669539f.jpg'
     conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'Join Group Bot', null, null, [
       ['Donate', '/donasi'],
       ['Speed', '/ping'],
