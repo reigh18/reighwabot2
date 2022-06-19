@@ -285,6 +285,7 @@ export async function handler(chatUpdate) {
                     antiLink: true,
                     viewonce: true,
                     antiToxic: true,
+                    simi: true
                     expired: 5,
                 }
             let settings = global.db.data.settings[this.user.jid]
