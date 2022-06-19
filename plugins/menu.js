@@ -151,10 +151,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = 'https://telegra.ph/file/67539945f5963d7492936.jpg'
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://github.com/BochilGaming/games-wabot', 'Github', null, null, [
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'GROUP BOT', null, null, [
       ['Donate', '/donasi'],
-      ['Speed', '/ping'],
-      ['Owner', '/owner']
+      ['SPEED', '/ping'],
+      ['OWNER', '/owner']
     ], m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
