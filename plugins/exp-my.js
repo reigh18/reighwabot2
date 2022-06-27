@@ -98,19 +98,17 @@ const inventory = {
 let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
   const tools = Object.keys(inventory.tools).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
-  const items = Object.keys(inventory.items).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v]}`).filter(v => v).join('\n│ ').trim()
+  const items = Object.keys(inventory.items).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v]}`).filter(v => v).join('\n').trim()
   const crates = Object.keys(inventory.crates).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v]}`).filter(v => v).join('\n').trim()
   const pets = Object.keys(inventory.pets).map(v => user[v] && `*${global.rpg.emoticon(v)}${v}:* ${user[v] >= inventory.pets[v] ? 'Max Levels' : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
-  const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `*✧ ${name}*: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
+  const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `*${name}*: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
   const caption = `
-⃝▣「 *S T A T U S  U S E R* 」
-│ 📛 *Name:* ${user.registered ? user.name : conn.getName(m.sender)}
-│ ${items}
-│ 🏅 *Role:* ${user.role}
-│ 🌟 *Status:* ${user.premiumTime > 0 ? 'Premium' : 'Free'}
-│ 📑 *Registered:* ${user.registered ? 'Yes':'No'}
-▣──···
-`.trim()
+[ *Status User* ]
+📛 *Name:* ${user.registered ? user.name : conn.getName(m.sender)}
+${items}
+🏅 *Role:* ${user.role}
+🌟 *Status:* ${user.premiumTime > 0 ? 'Premium' : 'Free'}
+📑 *Registered:* ${user.registered ? 'Yes':'No'}`.trim()
   conn.sendButton(m.chat, caption, global.wm, null, [`Inventory`, '.inv'],m)
 }
 handler.help = ['my']

@@ -5,12 +5,15 @@ let handler = async function (m, { args }) {
   let sn = createHash('md5').update(m.sender).digest('hex')
   if (args[0] !== sn) throw 'Serial Number salah'
   user.registered = false
-  m.reply('```Succes Unreg !```')
+  m.reply('*Berhasil Unregister*')
 }
 handler.help = ['', 'ister'].map(v => 'unreg' + v + ' <SN|SERIAL NUMBER>')
 handler.tags = ['xp']
 
 handler.command = /^unreg(ister)?$/i
 handler.register = true
+
+handler.group = false
+handler.private = true
 
 export default handler

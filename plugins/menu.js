@@ -59,8 +59,8 @@ Transfer [Type] [Jumlah] [@tag]
 [ *EXP* ]
 Levelup
 Daily
+Weekly
 Monthly
-Claim
 Leaderboard [Total User]
 
 [ *KERANG AJAIB* ]
