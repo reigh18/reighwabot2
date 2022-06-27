@@ -1,7 +1,7 @@
 import { siapakahaku } from '@bochilteam/scraper'
 
-let timeout = 120000
-let poin = 4999
+let timeout = 30000
+let poin = 5000
 let handler = async (m, { conn, usedPrefix }) => {
     conn.siapakahaku = conn.siapakahaku ? conn.siapakahaku : {}
     let id = m.chat
@@ -13,13 +13,13 @@ let handler = async (m, { conn, usedPrefix }) => {
     let caption = `
 Siapakah aku? ${json.soal}
 Waktu menjawab selama *${(timeout / 1000).toFixed(2)} detik*
-Bonus jika jawaban benar: ${poin} XP
+Bonus jika jawaban benar: ${poin} Exp
 `.trim()
     conn.siapakahaku[id] = [
-        await conn.sendButton(m.chat, caption, author, ['bantuan', `${usedPrefix}who`], m),
+        await conn.sendButton(m.chat, caption, author, ['Bantuan', `${usedPrefix}who`], m),
         json, poin,
         setTimeout(() => {
-            if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*`, author, ['siapahaku', '/siapakahaku'], conn.siapakahaku[id][0])
+            if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*`, author, ['Main lagi', '/siapakahaku'], conn.siapakahaku[id][0])
             delete conn.siapakahaku[id]
         }, timeout)
     ]

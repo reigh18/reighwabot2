@@ -38,11 +38,11 @@ Total Exp : %totalexp
 
 Bot Uptime: *%uptime (%muptime)*
 
-[ *MAIN* ]
+[ *GENERAL* ]
 Afk [reason]
 Menu
 
-[ *GAME* ]
+[ *GAMES* ]
 Caklontong
 Family100
 Math <mode>
@@ -171,8 +171,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = 'https://media.discordapp.net/attachments/755173180955689000/990858932018884679/unknown.png'
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'GROUP BOT', null, null, [
-      ['OWNER', '/owner']
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://github.com/reighpuy/', 'GitHub', null, null, [
+      ['Bot Owner', '/owner']
     ], m)
   } catch (e) {
     conn.reply(m.chat, 'Saat ini menu sedang error.', m)

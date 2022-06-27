@@ -1,7 +1,7 @@
 import { caklontong } from '@bochilteam/scraper'
 
-let timeout = 120000
-let poin = 4999
+let timeout = 30000
+let poin = 5000
 let handler = async (m, { conn, usedPrefix }) => {
     conn.caklontong = conn.caklontong ? conn.caklontong : {}
     let id = m.chat
@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let caption = `
 ${json.soal}
 Waktu menjawab selama *${(timeout / 1000).toFixed(2)} detik*
-Bonus: ${poin} XP
+Bonus: ${poin} Exp
 `.trim()
     conn.caklontong[id] = [
         await conn.sendButton(m.chat, caption, author, null, [['Bantuan', `${usedPrefix}calo`]], m),

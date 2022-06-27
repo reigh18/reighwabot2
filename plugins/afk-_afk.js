@@ -1,9 +1,7 @@
 export function before(m) {
     let user = global.db.data.users[m.sender]
     if (user.afk > -1) {
-        m.reply(`
-  Mode AFK telah diberhentikan ${user.afkReason ? ' (' + user.afkReason : ')'}
-  Selama ${(new Date - user.afk).toTimeString()}
+        m.reply(`Mode AFK telah dinonaktifkan ${user.afkReason ? ' (' + user.afkReason + ')' : ' '}\nTelah berada di mode AFK selama: ${(new Date - user.afk).toTimeString()}
   `.trim())
         user.afk = -1
         user.afkReason = ''
@@ -17,8 +15,7 @@ export function before(m) {
         if (!afkTime || afkTime < 0)
             continue
         let reason = user.afkReason || ''
-        m.reply(`Dia sedang berada di mode AFK ${reason ? '(' + reason + ')' : 'tanpa alasan'}
-  Selama ${(new Date - afkTime).toTimeString()}
+        m.reply(`Dia sedang berada di mode AFK ${reason ? '(' + reason + ')' : 'tanpa alasan'}\nSelama ${(new Date - afkTime).toTimeString()}
   `.trim())
     }
     return true

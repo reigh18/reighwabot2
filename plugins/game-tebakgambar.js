@@ -1,7 +1,7 @@
 import { tebakgambar } from '@bochilteam/scraper'
 
-let timeout = 120000
-let poin = 4999
+let timeout = 30000
+let poin = 5000
 let handler = async (m, { conn, usedPrefix }) => {
     conn.tebakgambar = conn.tebakgambar ? conn.tebakgambar : {}
     let id = m.chat
@@ -13,14 +13,14 @@ let handler = async (m, { conn, usedPrefix }) => {
     // if (!json.status) throw json
     let caption = `
 Waktu menjawab selama *${(timeout / 1000).toFixed(2)} detik*
-Bonus jika jawaban benar: ${poin} XP
+Bonus jika jawaban benar: ${poin} Exp
     `.trim()
     conn.tebakgambar[id] = [
         await conn.sendButton(m.chat, caption, author, json.img, buttons, m),
         json, poin,
         setTimeout(() => {
             if (conn.tebakgambar[id]) conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*`, author, null, [
-                ['tebakgambar', '/tebakgambar']
+                ['Main lagi', '/tebakgambar']
             ], conn.tebakgambar[id][0])
             delete conn.tebakgambar[id]
         }, timeout)

@@ -12,21 +12,21 @@ export async function before(m) {
         if (isSurrender) {
             clearTimeout(this.tebakgambar[id][3])
             delete this.tebakgambar[id]
-            return conn.sendButton(m.chat, '*Yah Menyerah :( !*', author, null, buttonTebakgambar, m)
+            return conn.sendButton(m.chat, 'Kamu telah menyerah.', author, null, buttonTebakgambar, m)
         }
         let json = JSON.parse(JSON.stringify(this.tebakgambar[id][1]))
         // m.reply(JSON.stringify(json, null, '\t'))
         if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
             global.db.data.users[m.sender].exp += this.tebakgambar[id][2]
-            conn.sendButton(m.chat, `Jawaban benar.\n+${this.tebakgambar[id][2]} XP`, author, null, buttonTebakgambar, m)
+            conn.sendButton(m.chat, `Jawaban benar.\n+${this.tebakgambar[id][2]} Exp`, author, null, buttonTebakgambar, m)
             clearTimeout(this.tebakgambar[id][3])
             delete this.tebakgambar[id]
         } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold)
             m.reply(`Jawabanmu hampir benar.`)
         else
             conn.sendButton(m.chat, `Jawaban salah.`, author, null, [
-                ['hint', '/hint'],
-                ['nyerah', 'menyerah']
+                ['Bantuan', '/hint'],
+                ['Menyerah', 'menyerah']
             ], m)
     }
     return !0

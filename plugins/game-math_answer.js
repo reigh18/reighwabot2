@@ -11,13 +11,13 @@ handler.before = async function (m) {
             global.db.data.users[m.sender].exp += math.bonus
             clearTimeout(this.math[id][3])
             delete this.math[id]
-            conn.sendButton(m.chat, `*Jawaban Benar!*\n+${math.bonus} XP`, author, null, [['again', `/math ${math.mode}`]], m)
+            conn.sendButton(m.chat, `Jawabanmu benar.\n+${math.bonus} XP`, author, null, [['Ulangi', `/math ${math.mode}`]], m)
         } else {
             if (--this.math[id][2] == 0) {
                 clearTimeout(this.math[id][3])
                 delete this.math[id]
-                conn.sendButton(m.chat, `*Kesempatan menjawab telah habis.*\nJawabannya adalah: *${math.result}*`, author, null, [['again', `/math ${math.mode}`]], m)
-            } else m.reply(`*Jawaban Salah!*\nMasih ada ${this.math[id][2]} kesempatan`)
+                conn.sendButton(m.chat, `Kesempatan menjawab telah habis.\nJawabannya adalah: *${math.result}*`, author, null, [['Ulangi', `/math ${math.mode}`]], m)
+            } else m.reply(`Jawaban salah.*\nMasih ada ${this.math[id][2]} kesempatan lagi!`)
         }
     }
     return !0
