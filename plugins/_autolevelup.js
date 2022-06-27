@@ -10,8 +10,7 @@ export function before(m) {
     if (before !== user.level) {
         m.reply(`
 Selamat, anda telah naik level!
-*${before}* -> *${user.level}*
-gunakan *.profile* untuk mengecek
+*${before}* -> *${user.level}*.
 	`.trim())
     }
 }
