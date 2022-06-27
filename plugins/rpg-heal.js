@@ -10,7 +10,7 @@ Ketik *${usedPrefix}buy potion ${count - user.potion}* untuk membeli Potion.
     user.potion -= count * 1
     user.health += heal * count
     m.reply(`
-Berhasuk menggunakan Potion sebanyak *${count}* 🥤Potion(s).
+Berhasil menggunakan Potion sebanyak *${count}* 🥤Potion(s).
 `.trim())
 }
 

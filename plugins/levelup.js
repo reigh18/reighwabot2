@@ -13,10 +13,11 @@ Kurang sebanyak *${max - user.exp}* Exp lagi untuk menuju ke level selanjutnya.
     let before = user.level * 1
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
     if (before !== user.level) {
-        let teks = `Selamat, ${conn.getName(m.sender)} telah naik level.`
+        let teks = `Selamat, *${conn.getName(m.sender)}* telah naik Level.`
         let str = `
 ${teks} 
-- Level: ${before} -> ${user.level}
+*Level*: ${before} -> ${user.level}
+
 ${new Date().toLocaleString('id-ID')}
 `.trim()
         try {
