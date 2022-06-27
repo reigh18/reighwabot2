@@ -16,7 +16,8 @@ Waktu menjawab selama *${(timeout / 1000).toFixed(2)} detik*
 Bonus jika jawaban benar: ${poin} Exp
 `.trim()
     conn.siapakahaku[id] = [
-        await conn.sendButton(m.chat, caption, author, ['Bantuan', `${usedPrefix}who`], m),
+        // await conn.sendButton(m.chat, caption, author, ['Bantuan', `${usedPrefix}who`], m),
+        await conn.reply(m.chat, caption, m),
         json, poin,
         setTimeout(() => {
             if (conn.siapakahaku[id]) conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*`, author, ['Main lagi', '/siapakahaku'], conn.siapakahaku[id][0])

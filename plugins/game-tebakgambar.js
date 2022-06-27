@@ -33,6 +33,6 @@ handler.command = /^tebakgambar/i
 export default handler
 
 const buttons = [
-    ['hint', '/hint'],
-    ['nyerah', 'menyerah']
+    ['Bantuan', '/hint'],
+    ['Menyerah', 'menyerah']
 ]

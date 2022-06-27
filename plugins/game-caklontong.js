@@ -13,10 +13,11 @@ Waktu menjawab selama *${(timeout / 1000).toFixed(2)} detik*
 Bonus: ${poin} Exp
 `.trim()
     conn.caklontong[id] = [
-        await conn.sendButton(m.chat, caption, author, null, [['Bantuan', `${usedPrefix}calo`]], m),
+        // await conn.sendButton(m.chat, caption, author, null, [['Bantuan', `${usedPrefix}calo`]], m),
+        await conn.reply(m.chat, caption, m),
         json, poin,
         setTimeout(async () => {
-            if (conn.caklontong[id]) await conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*\n${json.deskripsi}`, author, null, [['Cak Lontong', `${usedPrefix}caklontong`]], conn.caklontong[id][0])
+            if (conn.caklontong[id]) await conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah *${json.jawaban}*\n${json.deskripsi}`, author, null, [['Main Lagi', `${usedPrefix}caklontong`]], conn.caklontong[id][0])
             delete conn.caklontong[id]
         }, timeout)
     ]
