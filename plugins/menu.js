@@ -144,7 +144,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = 'https://telegra.ph/file/67539945f5963d7492936.jpg'
-    conn.sendHydrated(m.chat, text.trim(), author, [
+    conn.sendHydrated(m.chat, text.trim(), author, null, null, [
       ['OWNER', '/owner']
     ], m)
   } catch (e) {
