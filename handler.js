@@ -683,9 +683,8 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-Untuk mematikan fitur ini, ketik
-*.enable delete*
+Terdeteksi, @${participant.split`@`[0]} telah menghapus pesan.
+Untuk mematikan fitur ini, ketik *.enable delete*
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -697,16 +696,16 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*Perintah Khusus ArullOfc*',
-        owner: '*Perintah Khusus ArullOfc*',
-        mods: '*Perintah Khusus ArullOfc*',
-        premium: '*Perintah ini hanya untuk member Premium*',
-        group: '*Perintah ini hanya dapat digunakan di grup!*',
-        private: '*Perintah ini hanya dapat digunakan di Chat Pribadi!*',
-        admin: '*Perintah Khusus Admin*',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
-        restrict: 'Fitur ini di *disable*!'
+        rowner: '*Perintah ini hanya bisa digunakan oleh Owner Bot.*',
+        owner: '*Perintah ini hanya bisa digunakan oleh Owner Bot.*',
+        mods: '*Perintah ini hanya bisa digunakan oleh Moderator Bot.*',
+        premium: '*Perintah ini hanya bisa digunakan oleh Member Premium.*',
+        group: '*Perintah ini hanya bisa digunakan di Grup.*',
+        private: '*Perintah ini hanya bisa digunakan di Private Chat.*',
+        admin: '*Perintah ini hanya bisa digunakan oleh Admin Grup.*',
+        botAdmin: 'Untuk menjalankan perintah ini, jadikan bot sebagai *Admin* terlebih dahulu.',
+        unreg: 'Kamu belum mendaftar, daftar dengan cara:\n\n.daftar nama.umur*\n\nContoh: .daftar Manusia.16*',
+        restrict: 'Fitur ini di *disable*.'
     }[type]
     if (msg) return m.reply(msg)
 }
