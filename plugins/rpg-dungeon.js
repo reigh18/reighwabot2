@@ -65,7 +65,7 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
             buttons: buttons,
             headerType: 1
         }
-        conn.sendButton(m.chat, lmao, wm, ['gass..', 'gass..'], false, {quoted: m})
+        conn.sendButton(m.chat, lmao, global.wm, ['gass..', 'gass..'], false, {quoted: m})
         
         if (room.game.player1 && room.game.player2 && room.game.player3 && room.game.player4) {
 
@@ -344,7 +344,7 @@ ${usedPrefix}${command} ${text}` : '') + '\natau ketik *sendiri* untuk bermain s
             buttons: buttons,
             headerType: 1
         }
-        conn.sendButton(m.chat, lmao, wm, ['sendiri', 'sendiri'], false, { quoted: m})
+        conn.sendButton(m.chat, lmao, global.wm, ['sendiri', 'sendiri'], false, { quoted: m})
         global.dungeon[room.id] = room
       }
 }

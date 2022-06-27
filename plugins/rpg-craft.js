@@ -61,7 +61,7 @@ const sections = [
 
 const listMessage = {
   text: caption,
-  footer: wm,
+  footer: global.wm,
   title: lgocraft,
   buttonText: " C R A F T ",
   sections
@@ -134,7 +134,7 @@ const listMessage = {
           break
 
         default:
-          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+          return conn.sendButton( m.chat, caption, global.wm, null, [`⋮☰ Menu`, `.menu`], m)
       }
     }
   } catch (err) {
