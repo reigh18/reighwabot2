@@ -2,31 +2,31 @@ import { promises } from 'fs'
 import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 let tags = {
-  'main': 'Main',
-  'game': 'Game',
+  'main': 'MAIN',
+  'game': 'GAME',
   'rpg': 'RPG Games',
-  'xp': 'Exp & Limit',
-  'sticker': 'Sticker',
+  'xp': 'EXP & LIMIT',
+  'sticker': 'STICKER',
   'kerang': 'Kerang Ajaib',
   'quotes': 'Quotes',
-  'admin': 'Admin',
-  'group': 'Group',
-  'premium': 'Premium',
-  'internet': 'Internet',
-  'anonymous': 'Anonymous Chat',
-  'nulis': 'MagerNulis & Logo',
-  'downloader': 'Downloader',
-  'tools': 'Tools',
-  'fun': 'Fun',
-  'database': 'Database',
-  'vote': 'Voting',
-  'absen': 'Absen',
-  'quran': 'Al Qur\'an',
-  'jadibot': 'Jadi Bot',
-  'owner': 'Owner',
-  'host': 'Host',
-  'advanced': 'Advanced',
-  'info': 'Info',
+  // 'admin': 'ADMIN',
+  'group': 'GROUP',
+  // 'premium': 'PREMIUM',
+  'internet': 'INTERNET',
+  // 'anonymous': 'Anonymous Chat',
+  // 'nulis': 'MagerNulis & Logo',
+  // 'downloader': 'Downloader',
+  'tools': 'TOOLS',
+  'fun': 'FUN',
+  // 'database': 'DATABASE',
+  // 'vote': 'VOTING',
+  // 'absen': 'ABSEN',
+  // 'quran': 'Al Qur\'an',
+  // 'jadibot': 'Jadi Bot',
+  'owner': 'OWNER',
+  // 'host': 'HOST',
+  // 'advanced': 'ADVANCED',
+  'info': 'INFO',
   '': 'No Category',
 }
 const defaultMenu = {
@@ -34,17 +34,50 @@ const defaultMenu = {
 Limit : *%limit Limit*
 Role : *%role*
 Level : *%level (%exp / %maxexp)*
-Total XP : %totalexp ✨
+Total Exp : %totalexp
 
 Bot Uptime: *%uptime (%muptime)*
 
-%readmore`.trimStart(),
-  header: '*%category*',
-  body: '%cmd %islimit %isPremium',
-  footer: '\n',
-  after: `
-*%npmname* | %version
-${'```%npmdesc```'}
+[ *MAIN* ]
+Afk [reason]
+Menu
+
+[ *GAME* ]
+Caklontong
+Family100
+Math <mode>
+Siapakahaku
+Tebakgambar
+Tebakkata
+
+[ *RPG GAMES* ]
+Adventure / Petualang
+Mulung
+Judi
+Heal
+Inventory / Inv
+Monthly
+Open [Crate] [Count]
+Gacha [Crate] [Count]
+Buy [Item] [Count]
+Sell [Item] [Count]
+Transfer [Type] [Jumlah] [@tag]
+
+[ *EXP & LIMIT* ]
+Levelup
+Daily
+Claim
+Leaderboard [Total User]
+
+[ *KERANG AJAIB* ]
+Apakah <text>
+Kapan <text>
+Kerangajaib <text>
+Howcantik <text>
+Howganteng <text>
+Howgabut <text>
+Howgila <text>
+Howbucin <text>
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
