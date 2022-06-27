@@ -68,7 +68,7 @@ let handler = async (m, { command, args, usedPrefix }) => {
 Use Format *${usedPrefix}${command} [crate] [count]*
 Usage example: *${usedPrefix}${command} common 10*
 
-📍Crate list: 
+Crate list: 
 ${Object.keys(listCrate).map((v) => `
 ${rpg.emoticon(v)}${v}
 `.trim()).join('\n')}
@@ -77,8 +77,8 @@ ${rpg.emoticon(v)}${v}
     let count = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
     if (!(type in listCrate)) return m.reply(info)
     if (user[type] < count) return m.reply(`
-Your *${rpg.emoticon(type)}${type} crate* is not enough!, you only have ${user[type]} *${rpg.emoticon(type)}${type} crate*
-type *${usedPrefix}buy ${type} ${count - user[type]}* to buy
+Crate *${rpg.emoticon(type)}${type} kamu tidak mencukupi, Kamu hanya mempunyai ${user[type]} *${rpg.emoticon(type)}${type} crate*
+Ketik *${usedPrefix}buy ${type} ${count - user[type]}* untuk membeli.
 `.trim())
     // TODO: add pet crate
     // if (type !== 'pet')
@@ -94,7 +94,7 @@ type *${usedPrefix}buy ${type} ${count - user[type]}* to buy
             }
     user[type] -= count * 1
     m.reply(`
-You have opened *${count}* ${global.rpg.emoticon(type)}${type} crate and got:
+Berhasil membuka crate *${count}* ${global.rpg.emoticon(type)}${type} dan mendapatkan:
 ${Object.keys(crateReward).filter(v => v && crateReward[v] && !/legendary|pet|mythic|diamond|emerald/i.test(v)).map(reward => `
 *${global.rpg.emoticon(reward)}${reward}:* ${crateReward[reward]}
 `.trim()).join('\n')}
@@ -109,7 +109,7 @@ Congrats you got a epic item, which is ${pet ? `*${pet}* ${rpg.emoticon('pet')}p
 }
 handler.help = ['open', 'gacha'].map(v => v + ' [crate] [count]')
 handler.tags = ['rpg']
-handler.command = /^(open|buka|gacha)$/i
+handler.command = /^(open|gacha)$/i
 
 export default handler
 

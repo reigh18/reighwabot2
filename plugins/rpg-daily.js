@@ -6,7 +6,7 @@ const rewards = {
 const cooldown = 86400000
 let handler = async (m) => {
   let user = global.db.data.users[m.sender]
-  if (new Date - user.lastclaim < cooldown) throw `You have already claimed this daily claim!, wait for *${((user.lastclaim + cooldown) - new Date()).toTimeString()}*`
+  if (new Date - user.lastclaim < cooldown) throw `Kamu sudah mengambil Exp harian, lakukan kembali setelah *${((user.lastclaim + cooldown) - new Date()).toTimeString()}*`
   let text = ''
   for (let reward of Object.keys(rewards)) {
     if (!(reward in user)) continue
@@ -16,9 +16,9 @@ let handler = async (m) => {
   m.reply(text.trim())
   user.lastclaim = new Date * 1
 }
-handler.help = ['daily', 'claim']
+handler.help = ['daily']
 handler.tags = ['xp']
-handler.command = /^(daily|claim)$/i
+handler.command = /^(daily)$/i
 
 handler.cooldown = cooldown
 

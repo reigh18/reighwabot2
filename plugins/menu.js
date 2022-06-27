@@ -40,32 +40,26 @@ Bot Uptime: *%uptime (%muptime)*
 
 [ *GENERAL* ]
 Afk [reason]
-Menu
+Menu / Help
 
 [ *GAMES* ]
-Caklontong
 Family100
 Math <mode>
-Siapakahaku
-Tebakgambar
-Tebakkata
 
 [ *RPG GAMES* ]
 Adventure / Petualang
-Mulung
-Judi
 Heal
 Inventory / Inv
-Monthly
 Open [Crate] [Count]
 Gacha [Crate] [Count]
 Buy [Item] [Count]
 Sell [Item] [Count]
 Transfer [Type] [Jumlah] [@tag]
 
-[ *EXP & LIMIT* ]
+[ *EXP* ]
 Levelup
 Daily
+Monthly
 Claim
 Leaderboard [Total User]
 

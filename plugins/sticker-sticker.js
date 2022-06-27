@@ -40,6 +40,8 @@ handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (capt
 handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
+handler.limit = true
+
 export default handler
 
 const isUrl = (text) => {

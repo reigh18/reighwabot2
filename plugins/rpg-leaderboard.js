@@ -28,10 +28,10 @@ let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   let type = (args[0] || '').toLowerCase()
   const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 25)
   let wrong = `
-Use format *${usedPrefix}${command} [type] [page]*
-example *${usedPrefix}${command} money 1*
+Lakukan format berikut *${usedPrefix}${command} [type] [page]*
+Contoh: *${usedPrefix}${command} money 1*
 
-📍 Type list
+Type list
 ${leaderboard.map(v => `
 ${rpg.emoticon(v)}${v}
 `.trim()).join('\n')}

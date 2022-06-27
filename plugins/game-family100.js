@@ -27,4 +27,6 @@ handler.help = ['family100']
 handler.tags = ['game']
 handler.command = /^family100$/i
 
+handler.limit = true
+
 export default handler

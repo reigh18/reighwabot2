@@ -19,4 +19,6 @@ handler.help = ['kbbi <teks>']
 handler.tags = ['internet']
 handler.command = /^kbbi$/i
 
+handler.limit = true
+
 export default handler

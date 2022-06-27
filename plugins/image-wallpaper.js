@@ -9,5 +9,6 @@ handler.help = ['', '2'].map(v => 'wallpaper' + v + ' <query>')
 handler.tags = ['downloader']
 
 handler.command = /^(wallpaper2?)$/i
+handler.limit = true
 
 export default handler

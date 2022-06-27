@@ -73,4 +73,6 @@ function pickRandom(list) {
 
 handler.modes = modes
 
+handler.limit = true
+
 export default handler
