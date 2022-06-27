@@ -158,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     //   }),
     //   after
     // ].join('\n')
-    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? ' ' : ''
+    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? before : ''
     let replace = {
       '%': '%',
       p: _p, uptime, muptime,
