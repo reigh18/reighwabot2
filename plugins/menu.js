@@ -177,7 +177,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = 'https://media.discordapp.net/attachments/755173180955689000/990858932018884679/unknown.png'
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'GROUP BOT', null, null, [
+    conn.sendHydrated(m.chat, defaultMenu, author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'GROUP BOT', null, null, [
       ['OWNER', '/owner']
     ], m)
   } catch (e) {
