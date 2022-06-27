@@ -11,13 +11,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   Contoh penggunaan: ${usedPrefix}math medium
     `.trim(), author, null, buttons, m)
     let id = m.chat
-    if (id in conn.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.math[id][0])
+    if (id in conn.math) return conn.reply(m.chat, 'Masih ada soal belum terjawab.', conn.math[id][0])
     let math = genMath(mode)
     conn.math[id] = [
-        await conn.reply(m.chat, `Berapa hasil dari *${math.str}*?\n\nTimeout: ${(math.time / 1000).toFixed(2)} detik\nBonus Jawaban Benar: ${math.bonus} XP`, m),
+        await conn.reply(m.chat, `Berapa hasil dari *${math.str}*?\n\nWaktu untuk menjawab: ${(math.time / 1000).toFixed(2)} detik\nBesar bonus jika jawaban benar: ${math.bonus} XP`, m),
         math, 4,
         setTimeout(() => {
-            if (conn.math[id]) conn.sendButton(m.chat, `Waktu habis!\nJawabannya adalah ${math.result}`, author, null, [['again', `${usedPrefix}${command} ${math.mode}`], ...buttons], conn.math[id][0])
+            if (conn.math[id]) conn.sendButton(m.chat, `Waktu menjawab telah habis!\nJawabannya adalah ${math.result}`, author, null, [['again', `${usedPrefix}${command} ${math.mode}`], ...buttons], conn.math[id][0])
             delete conn.math[id]
         }, math.time)
     ]

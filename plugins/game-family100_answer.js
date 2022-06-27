@@ -12,7 +12,7 @@ export async function before(m) {
         let index = room.jawaban.indexOf(text)
         if (index < 0) {
             if (Math.max(...room.jawaban.filter((_, index) => !room.terjawab[index]).map(jawaban => similarity(jawaban, text))) >= threshold)
-                m.reply('Dikit lagi!')
+                m.reply('Jawabanmu hampir benar.')
             return !0
         }
         if (room.terjawab[index])
@@ -25,9 +25,9 @@ export async function before(m) {
     let caption = `
 *Soal:* ${room.soal}
 Terdapat *${room.jawaban.length}* jawaban${room.jawaban.find(v => v.includes(' ')) ? `
-(beberapa jawaban terdapat spasi)
+NB: beberapa jawaban terdapat spasi.
 ` : ''}
-${isWin ? `*SEMUA JAWABAN TERJAWAB*` : isSurrender ? '*MENYERAH!*' : ''}
+${isWin ? `Semua jawaban berhasil terjawab.` : isSurrender ? 'Menyerah' : ''}
 ${Array.from(room.jawaban, (jawaban, index) => {
         return isSurrender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
     }).filter(v => v).join('\n')}

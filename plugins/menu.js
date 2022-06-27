@@ -30,25 +30,18 @@ let tags = {
   '': 'No Category',
 }
 const defaultMenu = {
-  before: `
-╭─「 ArullBotzMD 」
-│ 👋🏻 Hai, %name!
-│
-│ 🧱 Limit : *%limit Limit*
-│ 🦸🏼‍♂️ Role : *%role*
-│ 🔼 Level : *%level (%exp / %maxexp)*
-│ 💫 Total XP : %totalexp ✨
-│ 
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
-│
-│ 📈 Uptime: *%uptime (%muptime)*
-│ 📊 Database: %rtotalreg of %totalreg
-╰────
+  before: `Hi, %name!
+Limit : *%limit Limit*
+Role : *%role*
+Level : *%level (%exp / %maxexp)*
+Total XP : %totalexp ✨
+
+Bot Uptime: *%uptime (%muptime)*
+
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '*%category*',
+  body: '%cmd %islimit %isPremium',
+  footer: '\n',
   after: `
 *%npmname* | %version
 ${'```%npmdesc```'}
@@ -151,13 +144,11 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = 'https://telegra.ph/file/67539945f5963d7492936.jpg'
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://chat.whatsapp.com/Hs5rHr27xu49VRLgdliMfR', 'GROUP BOT', null, null, [
-      ['Donate', '/donasi'],
-      ['SPEED', '/ping'],
+    conn.sendHydrated(m.chat, text.trim(), author, [
       ['OWNER', '/owner']
     ], m)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Saat ini menu sedang error.', m)
     throw e
   }
 }

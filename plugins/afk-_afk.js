@@ -17,7 +17,7 @@ export function before(m) {
         if (!afkTime || afkTime < 0)
             continue
         let reason = user.afkReason || ''
-        m.reply(`Dia sedang AFK ${reason ? '(' + reason + ')' : 'tanpa alasan'}
+        m.reply(`Dia sedang berada di mode AFK ${reason ? '(' + reason + ')' : 'tanpa alasan'}
   Selama ${(new Date - afkTime).toTimeString()}
   `.trim())
     }
