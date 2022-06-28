@@ -1,13 +1,13 @@
 {
   "users": {
     "6281276709668@s.whatsapp.net": {
-      "exp": 77773,
+      "exp": 75292,
       "limit": 100,
       "lastclaim": 1656392204776,
-      "registered": true,
-      "name": "daffy",
-      "age": 20,
-      "regTime": 1656393205015,
+      "registered": false,
+      "name": "Muhamad Khadaffy",
+      "age": -1,
+      "regTime": -1,
       "afk": -1,
       "afkReason": "",
       "banned": false,
@@ -15,22 +15,22 @@
       "level": 15,
       "role": "Beginner",
       "autolevelup": true,
-      "money": 92004,
-      "health": 848,
-      "potion": 14,
-      "trash": 242,
-      "wood": 1,
-      "rock": 3,
-      "string": 3,
+      "money": 90997,
+      "health": 100,
+      "potion": 34,
+      "trash": 0,
+      "wood": 0,
+      "rock": 0,
+      "string": 0,
       "emerald": 0,
-      "diamond": 1,
+      "diamond": 0,
       "gold": 0,
       "iron": 0,
       "common": 0,
       "uncommon": 0,
-      "mythic": 0,
-      "legendary": 0,
-      "pet": 1,
+      "mythic": 3,
+      "legendary": 1,
+      "pet": 0,
       "horse": 0,
       "horseexp": 0,
       "cat": 0,
@@ -51,7 +51,7 @@
       "pickaxedurability": 0,
       "fishingrod": 0,
       "fishingroddurability": 0,
-      "lastadventure": 1656393427057,
+      "lastadventure": 0,
       "lastfishing": 0,
       "lastdungeon": 0,
       "lastduel": 0,
@@ -63,7 +63,7 @@
       "catexp": 0
     },
     "14179019328@s.whatsapp.net": {
-      "exp": 19,
+      "exp": 0,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -153,8 +153,7 @@
       "antiLink": true,
       "viewonce": true,
       "antiToxic": true,
-      "expired": 5,
-      "simi": true
+      "expired": 5
     }
   },
   "stats": {
@@ -165,10 +164,10 @@
       "lastSuccess": 1656392177050
     },
     "speed.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656394065538,
-      "lastSuccess": 1656394065538
+      "total": 2,
+      "success": 2,
+      "last": 1656392177582,
+      "lastSuccess": 1656392177582
     },
     "rpg-daily.js": {
       "total": 2,
@@ -189,10 +188,10 @@
       "lastSuccess": 1656392209169
     },
     "rpg-inventory.js": {
-      "total": 5,
-      "success": 5,
-      "last": 1656394228585,
-      "lastSuccess": 1656394228585
+      "total": 2,
+      "success": 2,
+      "last": 1656392210990,
+      "lastSuccess": 1656392210990
     },
     "levelup.js": {
       "total": 2,
@@ -219,94 +218,10 @@
       "lastSuccess": 0
     },
     "database.js": {
-      "total": 4,
-      "success": 3,
-      "last": 1656393133325,
-      "lastSuccess": 1656393133325
-    },
-    "exp-my.js": {
-      "total": 5,
-      "success": 5,
-      "last": 1656394223719,
-      "lastSuccess": 1656394223719
-    },
-    "exp-daftar.js": {
-      "total": 2,
+      "total": 3,
       "success": 2,
-      "last": 1656393205016,
-      "lastSuccess": 1656393205016
-    },
-    "exp-ceksn.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656393304953,
-      "lastSuccess": 1656393304953
-    },
-    "rpg-adventure.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1656393427058,
-      "lastSuccess": 1656393427058
-    },
-    "rpg-heal.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656393439591,
-      "lastSuccess": 1656393439591
-    },
-    "rpg-open.js": {
-      "total": 6,
-      "success": 6,
-      "last": 1656393480298,
-      "lastSuccess": 1656393480298
-    },
-    "gachanime.js": {
-      "total": 2,
-      "success": 0,
-      "last": 1656393761596,
-      "lastSuccess": 0
-    },
-    "filmanime.js": {
-      "total": 2,
-      "success": 0,
-      "last": 1656393985921,
-      "lastSuccess": 0
-    },
-    "getsider.js": {
-      "total": 5,
-      "success": 0,
-      "last": 1656395053248,
-      "lastSuccess": 0
-    },
-    "getpp.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1656394151894,
-      "lastSuccess": 1656394151894
-    },
-    "enable.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656394217331,
-      "lastSuccess": 1656394217331
-    },
-    "idmobilelegends.js": {
-      "total": 2,
-      "success": 0,
-      "last": 1656395374059,
-      "lastSuccess": 0
-    },
-    "heroml.js": {
-      "total": 3,
-      "success": 0,
-      "last": 1656395441209,
-      "lastSuccess": 0
-    },
-    "igstalk.js": {
-      "total": 2,
-      "success": 0,
-      "last": 1656395491694,
-      "lastSuccess": 0
+      "last": 1656393083244,
+      "lastSuccess": 1656393047441
     }
   },
   "msgs": {},

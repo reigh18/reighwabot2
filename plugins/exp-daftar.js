@@ -90,5 +90,6 @@ handler.command = /^(daftar|verify|reg(ister)?)$/i
 
 handler.group = false
 handler.private = true
+handler.register = false
 
 export default handler

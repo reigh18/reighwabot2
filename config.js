@@ -28,8 +28,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Sticker by'
-global.author = 'ReighBot'
+global.packname = 'ReighBot'
+global.author = 'D'
 
 global.multiplier = 69 // The higher, The harder levelup
 
