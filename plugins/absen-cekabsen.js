@@ -27,4 +27,4 @@ handler.help = ['cekabsen']
 handler.tags = ['absen']
 handler.command = /^cekabsen$/i
 
-module.exports = handler
+export default handler

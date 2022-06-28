@@ -20,7 +20,7 @@ ${readMore}
 handler.help = ['profile']
 handler.tags = ['rpg']
 handler.command = /^(profile|profil|pp|propile|propil)$/i
-module.exports = handler
+export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)

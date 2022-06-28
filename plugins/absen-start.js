@@ -21,4 +21,4 @@ handler.help = ['mulaiabsen [teks]']
 handler.tags = ['absen']
 handler.command = /^(start|mulai)absen$/i
 
-module.exports = handler
+export default handler

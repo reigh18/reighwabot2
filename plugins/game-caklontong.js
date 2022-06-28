@@ -29,4 +29,4 @@ handler.help = ['caklontong']
 handler.tags = ['game']
 handler.command = /^caklontong/i
 
-module.exports = handler
+export default handler
