@@ -8,10 +8,10 @@ let handler = async function (m, { text, usedPrefix, command }) {
 		{
 	title: "Daftar Menu (Tools)",
 	rows: [
-    {title: "Wikipedia", rowId: '.wikipedia depok'},
-    {title: "Readmore", rowId: '.readmore test'},
-    {title: "Style text", rowId: '.style test'},
+    {title: "Readmore", rowId: '.carareadmore'},
+    {title: "Style text", rowId: '.carastyletext'},
     {title: "Create sticker", rowId: '.carasticker'},
+    {title: "KBBI", rowId: '.carakbbi'},
 	]
     },
 ]

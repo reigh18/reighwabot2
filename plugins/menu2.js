@@ -12,7 +12,6 @@ let handler = async function (m, { text, usedPrefix, command }) {
     {title: "Menu Tools", rowId: '.menutools'},
     {title: "Menu General", rowId: '.menugeneral'},
     {title: "Menu Media", rowId: '.menumedia'},
-    {title: "Menu Owner", rowId: '.menuowner'},
 	]
     },
 ]

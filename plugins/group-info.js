@@ -38,5 +38,6 @@ handler.tags = ['group']
 handler.command = /^(gro?upinfo|info(gro?up|gc))$/i
 
 handler.group = true
+handler.admin = true
 
 export default handler

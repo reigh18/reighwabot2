@@ -1,7 +1,7 @@
 {
   "users": {
     "6281276709668@s.whatsapp.net": {
-      "exp": 79145,
+      "exp": 79592,
       "limit": 100,
       "lastclaim": 1656392204776,
       "registered": false,
@@ -715,16 +715,16 @@
       "lastSuccess": 1656868863701
     },
     "menu2.js": {
-      "total": 20,
-      "success": 19,
-      "last": 1656940520580,
-      "lastSuccess": 1656940520580
+      "total": 22,
+      "success": 21,
+      "last": 1656942020590,
+      "lastSuccess": 1656942020590
     },
     "menugrup.js": {
-      "total": 4,
-      "success": 4,
-      "last": 1656934419186,
-      "lastSuccess": 1656934419186
+      "total": 5,
+      "success": 5,
+      "last": 1656941676036,
+      "lastSuccess": 1656941676036
     },
     "afk-afk.js": {
       "total": 2,
@@ -751,10 +751,10 @@
       "lastSuccess": 1656934998001
     },
     "info-grouplist.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1656935174282,
-      "lastSuccess": 1656935174282
+      "total": 3,
+      "success": 3,
+      "last": 1656941688007,
+      "lastSuccess": 1656941688007
     },
     "menuowner.js": {
       "total": 4,
@@ -769,10 +769,10 @@
       "lastSuccess": 1656935634774
     },
     "menutools.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656940612498,
-      "lastSuccess": 1656940612498
+      "total": 5,
+      "success": 5,
+      "last": 1656942024398,
+      "lastSuccess": 1656942024398
     },
     "tool-styletext.js": {
       "total": 2,
@@ -787,16 +787,58 @@
       "lastSuccess": 1656935860166
     },
     "wikipedia.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1656935891486,
-      "lastSuccess": 1656935891486
+      "total": 3,
+      "success": 3,
+      "last": 1656941759398,
+      "lastSuccess": 1656941759398
     },
     "carasticker.js": {
-      "total": 3,
-      "success": 1,
-      "last": 1656940656738,
-      "lastSuccess": 1656940656738
+      "total": 4,
+      "success": 2,
+      "last": 1656941680555,
+      "lastSuccess": 1656941680555
+    },
+    "sticker-sticker.js": {
+      "total": 5,
+      "success": 5,
+      "last": 1656941581455,
+      "lastSuccess": 1656941581455
+    },
+    "menumedia.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656941666909,
+      "lastSuccess": 1656941666909
+    },
+    "internet-kbbi.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656941846289,
+      "lastSuccess": 1656941846289
+    },
+    "image-wallpaper.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656941859655,
+      "lastSuccess": 1656941859655
+    },
+    "menugeneral.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656942025784,
+      "lastSuccess": 1656942025784
+    },
+    "carareadmore.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656942030547,
+      "lastSuccess": 1656942030547
+    },
+    "carakbbi.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656942037333,
+      "lastSuccess": 1656942037333
     }
   },
   "msgs": {},
