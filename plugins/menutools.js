@@ -6,27 +6,30 @@ let handler = async function (m, { text, usedPrefix, command }) {
 }
 	const sections = [
 		{
-	title: "Daftar Menu (Games)",
+	title: "Daftar Menu (Tools)",
 	rows: [
-    {title: "Family100", rowId: '.family100'}
+    {title: "Wikipedia", rowId: '.wikipedia depok'},
+    {title: "Readmore", rowId: '.readmore test'},
+    {title: "Style text", rowId: '.style test'},
+    {title: "Create sticker", rowId: '.carasticker'},
 	]
     },
 ]
 
 const listMessage = {
-  text: `Halo ${conn.getName(m.sender)},\nPilih menu dengan sentuh tombol Pilih Menu dibawah.`,
+  text: `Halo ${conn.getName(m.sender)},\nPilih menu dengan sentuh tombol Pilih Menu Tools dibawah.`,
   footer: global.wm,
-  title: "*Daftar Menu Games*",
-  buttonText: "Pilih Menu",
+  title: "*Daftar Menu Tools*",
+  buttonText: "Pilih Menu Tools",
   sections
 }
 
   let user = global.db.data.users[m.sender]
   if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, m)
 }
-handler.help = ['menugame', 'menugames']
+handler.help = ['menutool', 'menutools']
 handler.tags = ['main']
-handler.command = /^(menugame|menugames|\?)$/i
+handler.command = /^(menutool|menutools|\?)$/i
 
 handler.group = false
 handler.private = false

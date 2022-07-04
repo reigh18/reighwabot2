@@ -9,16 +9,19 @@ let handler = async function (m, { text, usedPrefix, command }) {
 	title: "Daftar Menu (Group)",
 	rows: [
     {title: "AFK", rowId: '.afk berak'},
-    {title: "Speed", rowId: '.speed'}
+    {title: "Family100", rowId: '.family100'},
+    {title: "Group Link", rowId: '.linkgroup'},
+    {title: "Group Info", rowId: '.infogroup'},
+    {title: "Group List", rowId: '.grouplist'},
 	]
     },
 ]
 
 const listMessage = {
-  text: `Halo ${conn.getName(m.sender)},\nPilih menu dengan sentuh tombol Pilih Menu dibawah.`,
+  text: `Halo ${conn.getName(m.sender)},\nPilih menu dengan sentuh tombol Pilih Menu Group dibawah.`,
   footer: global.wm,
   title: "*Daftar Menu Group*",
-  buttonText: "Pilih Menu",
+  buttonText: "Pilih Menu Group",
   sections
 }
 

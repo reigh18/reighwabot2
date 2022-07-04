@@ -5,34 +5,35 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
     let text = `*「 Group Information 」*\n
-*ID:* 
+*Group ID:* 
 ${groupMetadata.id}
-*Name:* 
+*Group Name:* 
 ${groupMetadata.subject}
-*Description:* 
+*Group Description:*
 ${groupMetadata.desc?.toString() || 'unknown'}
 *Total Members:*
 ${participants.length} Members
-*Group Owner:* 
+*Group Owner:*
 @${owner.split('@')[0]}
 *Group Admins:*
 ${listAdmin}
-*Group Settings:*
-${isBanned ? '✅' : '❌'} Banned
-${welcome ? '✅' : '❌'} Welcome
-${detect ? '✅' : '❌'} Detect
-${del ? '❌' : '✅'} Anti Delete
-${antiLink ? '✅' : '❌'} Anti Link
-*Message Settings:*
-Welcome: ${sWelcome}
-Bye: ${sBye}
-Promote: ${sPromote}
-Demote: ${sDemote}
 `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 
-handler.help = ['infogrup']
+// *Group Settings:*
+// ${isBanned ? '✅' : '❌'} Banned
+// ${welcome ? '✅' : '❌'} Welcome
+// ${detect ? '✅' : '❌'} Detect
+// ${del ? '❌' : '✅'} Anti Delete
+// ${antiLink ? '✅' : '❌'} Anti Link
+// *Message Settings:*
+// Welcome: ${sWelcome}
+// Bye: ${sBye}
+// Promote: ${sPromote}
+// Demote: ${sDemote}
+
+handler.help = ['infogroup']
 handler.tags = ['group']
 handler.command = /^(gro?upinfo|info(gro?up|gc))$/i
 

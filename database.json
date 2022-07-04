@@ -1,7 +1,7 @@
 {
   "users": {
     "6281276709668@s.whatsapp.net": {
-      "exp": 78476,
+      "exp": 79145,
       "limit": 100,
       "lastclaim": 1656392204776,
       "registered": false,
@@ -559,10 +559,10 @@
   },
   "stats": {
     "menu.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1656862288286,
-      "lastSuccess": 1656862288286
+      "total": 4,
+      "success": 4,
+      "last": 1656933598268,
+      "lastSuccess": 1656933598268
     },
     "speed.js": {
       "total": 5,
@@ -673,9 +673,9 @@
       "lastSuccess": 0
     },
     "getsider.js": {
-      "total": 5,
+      "total": 7,
       "success": 0,
-      "last": 1656395053248,
+      "last": 1656934268251,
       "lastSuccess": 0
     },
     "getpp.js": {
@@ -715,22 +715,88 @@
       "lastSuccess": 1656868863701
     },
     "menu2.js": {
-      "total": 15,
-      "success": 14,
-      "last": 1656869557128,
-      "lastSuccess": 1656869557128
+      "total": 20,
+      "success": 19,
+      "last": 1656940520580,
+      "lastSuccess": 1656940520580
     },
     "menugrup.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1656869561228,
-      "lastSuccess": 1656869561228
+      "total": 4,
+      "success": 4,
+      "last": 1656934419186,
+      "lastSuccess": 1656934419186
     },
     "afk-afk.js": {
       "total": 2,
       "success": 2,
       "last": 1656869566362,
       "lastSuccess": 1656869566362
+    },
+    "group-info.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1656934540551,
+      "lastSuccess": 1656934540551
+    },
+    "group-link.js": {
+      "total": 4,
+      "success": 3,
+      "last": 1656934953656,
+      "lastSuccess": 1656934936375
+    },
+    "group-pengumuman.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656934998001,
+      "lastSuccess": 1656934998001
+    },
+    "info-grouplist.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656935174282,
+      "lastSuccess": 1656935174282
+    },
+    "menuowner.js": {
+      "total": 4,
+      "success": 4,
+      "last": 1656940532269,
+      "lastSuccess": 1656940532269
+    },
+    "owner-promote.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656935634774,
+      "lastSuccess": 1656935634774
+    },
+    "menutools.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1656940612498,
+      "lastSuccess": 1656940612498
+    },
+    "tool-styletext.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656935859296,
+      "lastSuccess": 1656935859296
+    },
+    "tool-readmore.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656935860166,
+      "lastSuccess": 1656935860166
+    },
+    "wikipedia.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1656935891486,
+      "lastSuccess": 1656935891486
+    },
+    "carasticker.js": {
+      "total": 3,
+      "success": 1,
+      "last": 1656940656738,
+      "lastSuccess": 1656940656738
     }
   },
   "msgs": {},

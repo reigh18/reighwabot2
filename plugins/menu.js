@@ -173,9 +173,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     throw e
   }
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['menuz', 'helpz', '?z']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^(menuz|helpz|\?)$/i
 
 handler.exp = 3
 

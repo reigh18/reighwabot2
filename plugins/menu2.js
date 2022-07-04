@@ -9,7 +9,10 @@ let handler = async function (m, { text, usedPrefix, command }) {
 	title: "Daftar Menu",
 	rows: [
     {title: "Menu Group", rowId: '.menugroup'},
-    {title: "Menu Games", rowId: '.menugames'}
+    {title: "Menu Tools", rowId: '.menutools'},
+    {title: "Menu General", rowId: '.menugeneral'},
+    {title: "Menu Media", rowId: '.menumedia'},
+    {title: "Menu Owner", rowId: '.menuowner'},
 	]
     },
 ]
@@ -25,9 +28,9 @@ const listMessage = {
   let user = global.db.data.users[m.sender]
   if (!Reg.test(text)) return conn.sendMessage(m.chat, listMessage, m)
 }
-handler.help = ['menu2', 'help2', '??']
+handler.help = ['menu', 'help', '??']
 handler.tags = ['main']
-handler.command = /^(menu2|help2|\?)$/i
+handler.command = /^(menu|help|\?)$/i
 
 handler.group = false
 handler.private = false
