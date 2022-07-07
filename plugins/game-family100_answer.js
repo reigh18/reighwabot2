@@ -1,4 +1,6 @@
 import similarity from 'similarity'
+import db from '../lib/database.js'
+
 const threshold = 0.72 // semakin tinggi nilai, semakin mirip
 export async function before(m) {
     this.game = this.game ? this.game : {}
@@ -17,7 +19,7 @@ export async function before(m) {
         }
         if (room.terjawab[index])
             return !0
-        let users = global.db.data.users[m.sender]
+        let users = db.data.users[m.sender]
         room.terjawab[index] = m.sender
         users.exp += room.winScore
     }
@@ -25,15 +27,15 @@ export async function before(m) {
     let caption = `
 *Soal:* ${room.soal}
 Terdapat *${room.jawaban.length}* jawaban${room.jawaban.find(v => v.includes(' ')) ? `
-NB: beberapa jawaban terdapat spasi.
+NB: beberapa jawaban terdapat spasi
 ` : ''}
-${isWin ? `Semua jawaban berhasil terjawab.` : isSurrender ? 'Menyerah' : ''}
+${isWin ? `Semua jawaban berhasil terjawab.` : isSurrender ? '*Menyerah*' : ''}
 ${Array.from(room.jawaban, (jawaban, index) => {
         return isSurrender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
     }).filter(v => v).join('\n')}
-${isSurrender ? '' : `+${room.winScore} XP tiap jawaban benar`}
+${isSurrender ? '' : `mendapatkan ${room.winScore} Exp tiap jawaban benar`}
     `.trim()
-    const msg = await this.sendButton(m.chat, caption, author, null, [[`${(isWin || isSurrender) ? 'Family 100' : 'Nyerah'}`, `${(isWin || isSurrender) ? '.family100' : 'nyerah'}`]], null, {
+    const msg = await this.sendButton(m.chat, caption, author, null, [[`${(isWin || isSurrender) ? 'Family 100' : 'Menyerah'}`, `${(isWin || isSurrender) ? '.family100' : 'nyerah'}`]], null, {
         mentions: this.parseMention(caption)
     })
     room.msg = msg

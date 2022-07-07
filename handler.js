@@ -44,7 +44,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.exp))
                     user.exp = 0
                 if (!isNumber(user.limit))
-                    user.limit = 10
+                    user.limit = 25
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
                 if (!('registered' in user))
@@ -175,7 +175,7 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    limit: 25,
                     lastclaim: 0,
                     registered: false,
                     name: m.name,
@@ -191,7 +191,6 @@ export async function handler(chatUpdate) {
 
                     money: 0,
                     health: 100,
-                    limit: 100,
                     potion: 10,
                     trash: 0,
                     wood: 0,
@@ -482,11 +481,12 @@ export async function handler(chatUpdate) {
                 m.isCommand = true
                 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
                 if (xp > 200)
-                    m.reply('Ngecit -_-') // Hehehe
+                    m.reply('Curang!') // Hehehe
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+                    // this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+                    this.reply(m.chat, `Limit anda habis.`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
@@ -546,7 +546,8 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        m.reply(+m.limit + ' Limit terpakai')
+                        // m.reply(+m.limit + ' Limit terpakai.')
+                        console.log('Limit terpakai.')
                 }
                 break
             }
