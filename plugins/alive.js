@@ -31,4 +31,4 @@ handler.tags = ['main']
 handler.command = /^(alive)$/i
 handler.fail = null
 
-module.exports = handler
+export default handler

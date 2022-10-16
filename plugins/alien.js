@@ -43,4 +43,4 @@ handler.fail = null
 handler.exp = 0
 handler.limit = true
 
-module.exports = handler
+export default handler

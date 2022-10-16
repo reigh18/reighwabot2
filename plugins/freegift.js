@@ -19,4 +19,4 @@ handler.help = ['freegift <kode>']
 handler.tags = ['xp']
 handler.command = /^(freegift)$/i
 
-module.exports = handler
+export default handler
