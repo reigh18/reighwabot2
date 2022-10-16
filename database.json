@@ -1,7 +1,7 @@
 {
   "users": {
     "6281276709668@s.whatsapp.net": {
-      "exp": 91021,
+      "exp": 91115,
       "limit": 100,
       "lastclaim": 1656392204776,
       "registered": true,
@@ -63,7 +63,7 @@
       "catexp": 0
     },
     "14179019328@s.whatsapp.net": {
-      "exp": 44,
+      "exp": 49,
       "limit": 100,
       "lastclaim": 0,
       "registered": false,
@@ -1308,6 +1308,35 @@
       "antiToxic": true,
       "expired": 5,
       "simi": true
+    },
+    "14179019328@s.whatsapp.net": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": true,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": true,
+      "viewonce": true,
+      "antiToxic": true,
+      "expired": 5
+    },
+    "120363022674270571@g.us": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": true,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": true,
+      "viewonce": true,
+      "antiToxic": true,
+      "expired": 5,
+      "simi": true
     }
   },
   "stats": {
@@ -1318,10 +1347,10 @@
       "lastSuccess": 1656933598268
     },
     "speed.js": {
-      "total": 8,
-      "success": 8,
-      "last": 1657179148774,
-      "lastSuccess": 1657179148774
+      "total": 9,
+      "success": 9,
+      "last": 1665942744385,
+      "lastSuccess": 1665942744385
     },
     "rpg-daily.js": {
       "total": 2,
@@ -1384,10 +1413,10 @@
       "lastSuccess": 1656394223719
     },
     "exp-daftar.js": {
-      "total": 9,
-      "success": 7,
-      "last": 1657091171747,
-      "lastSuccess": 1657091171747
+      "total": 10,
+      "success": 8,
+      "last": 1665942873855,
+      "lastSuccess": 1665942873855
     },
     "exp-ceksn.js": {
       "total": 6,
@@ -1468,10 +1497,10 @@
       "lastSuccess": 1656868863701
     },
     "menu2.js": {
-      "total": 26,
-      "success": 25,
-      "last": 1657179175883,
-      "lastSuccess": 1657179175883
+      "total": 29,
+      "success": 28,
+      "last": 1665942764372,
+      "lastSuccess": 1665942764372
     },
     "menugrup.js": {
       "total": 7,
