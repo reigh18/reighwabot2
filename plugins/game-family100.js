@@ -1,4 +1,4 @@
-import { family100 } from '@bochilteam/scraper'
+import  { family100 } from '../lib/games/family100.json'
 const winScore = 5000
 async function handler(m) {
     this.game = this.game ? this.game : {}
