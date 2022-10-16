@@ -131,27 +131,27 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           if (!(tag in tags) && tag) tags[tag] = tag
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || defaultMenu.before
-    // let header = conn.menu.header || defaultMenu.header
-    // let body = conn.menu.body || defaultMenu.body
-    // let footer = conn.menu.footer || defaultMenu.footer
-    // let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
-    // let _text = [
-    //   before,
-    //   ...Object.keys(tags).map(tag => {
-    //     return header.replace(/%category/g, tags[tag]) + '\n' + [
-    //       ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
-    //         return menu.help.map(help => {
-    //           return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-    //             .replace(/%islimit/g, menu.limit ? '(Limit)' : '')
-    //             .replace(/%isPremium/g, menu.premium ? '(Premium)' : '')
-    //             .trim()
-    //         }).join('\n')
-    //       }),
-    //       footer
-    //     ].join('\n')
-    //   }),
-    //   after
-    // ].join('\n')
+    let header = conn.menu.header || defaultMenu.header
+    let body = conn.menu.body || defaultMenu.body
+    let footer = conn.menu.footer || defaultMenu.footer
+    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let _text = [
+      before,
+      ...Object.keys(tags).map(tag => {
+        return header.replace(/%category/g, tags[tag]) + '\n' + [
+          ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
+            return menu.help.map(help => {
+              return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
+                .replace(/%islimit/g, menu.limit ? '(Limit)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Premium)' : '')
+                .trim()
+            }).join('\n')
+          }),
+          footer
+        ].join('\n')
+      }),
+      after
+    ].join('\n')
     let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? before : ''
     let replace = {
       '%': '%',
@@ -178,6 +178,7 @@ handler.tags = ['main']
 handler.command = /^(menuz|helpz|\?)$/i
 
 handler.exp = 3
+handler.owner = true
 
 export default handler
 

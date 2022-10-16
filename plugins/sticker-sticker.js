@@ -41,6 +41,7 @@ handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
 handler.limit = true
+handler.owner = true
 // handler.botAdmin = true
 handler.group = true
 handler.private = false
